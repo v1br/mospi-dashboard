@@ -33,5 +33,21 @@
 
 ---
 
+Understand Project Structure:
+
+```bash
+.
+├── api               #backend fast-api
+├── app               #frontend react-based dashboard
+├── docs              #project specification
+├── models            #trained models
+├── notebooks         #data analysis
+├── CONTRIBUTING.md   #guidelines for contribution
+├── LICENSE.md        #permissions for usage
+└── README.md         #project introduction
+```
+
+---
+
 Important Documents:
 - [Software Requirements Specification](/docs/software-requirements-specification.md)
