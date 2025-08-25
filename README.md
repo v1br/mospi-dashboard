@@ -1,23 +1,5 @@
-<!-- Shields.io badges -->
-
-
-<!-- MAIN SECTION -->
-<p align="center">
-  <br />
-  <h3 align="center">Title</h3>
-  <h5 align="center">(Image)</h5>
-
-  <p align="center">
-    Project description.<br />
-    <br />
-    <a href="">View</a>
-    |
-    <a href="">Pulls</a>
-    |
-    <a href="">Issues</a>
-    |
-    <a href="">License</a>
-  </p>
+<div align="center" width="400px">
+  <h3 align="center">Macroeconomic Analysis & Modelling</h3>
 
   <p align="center">
     <img src="https://img.shields.io/badge/jupyter-292929?logo=jupyter">
@@ -26,28 +8,31 @@
     <img src="https://img.shields.io/badge/reactrouter-292929?logo=reactrouter">
     <img src="https://img.shields.io/badge/tailwind-292929?logo=tailwindcss">
     <img src="https://img.shields.io/badge/chart-292929?logo=chartdotjs">
-    <img src="https://img.shields.io/badge/vercel-292929?logo=vercel">
-    <img src="https://img.shields.io/badge/render-292929?logo=render">
   </p>
+
+  <h5 align="center"><img src="docs/assets/poster.gif" width="400px"></h5>
+</div>
+
+---
+
+<b>Abstract</b>
+
+<p align="left">
+  This project aims to build an interactive dashboard that visualizes and analyses key macroeconomic indicators of India using data from the National Accounts Statistics (NAS) and other official economic datasets. The goal is to provide a consolidated and user-friendly platform that highlights trends in GDP growth, sectoral contributions, consumption and investment patterns, government expenditure, trade balances, and savings over recent years. By combining statistical data with visualization and analytical tools, the project seeks to support a deeper understanding of India’s economic trajectory and provide stakeholders with evidence-based insights for research, policy, and education.
 </p>
 
 ---
 
-Understand Project Structure:
+<b>Contributors</b>
 
-```bash
-.
-├── api               #backend fast-api
-├── app               #frontend react-based dashboard
-├── docs              #project specification
-├── models            #trained models
-├── notebooks         #data analysis
-├── CONTRIBUTING.md   #guidelines for contribution
-├── LICENSE.md        #permissions for usage
-└── README.md         #project introduction
-```
-
----
-
-Important Documents:
-- [Software Requirements Specification](/docs/software-requirements-specification.md)
+<ul>
+  <li>
+    <a href='https://github.com/AbhinnV04'>Abhinn Verma</a> 
+  </li>
+  <li>
+    <a href='https://github.com/Samarthya21'>Samarthya Alok</a> 
+  </li>
+  <li>
+    <a href='https://github.com/v1br'>Vibhor Agrawal</a> 
+  </li>
+</ul>
