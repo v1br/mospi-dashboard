@@ -1,0 +1,7 @@
+GDP = GVA at basic prices + Taxes on products including import duties - less subsidies on products
+NDP = GDP - CFC
+GNI = GDP + Primary income receivable
+NNI = GNI - CFC
+GNDI = GNI + Other current transfers (net) from ROW
+NNDI = GNDI - CFC
+Net saving = NNDI - CFC
