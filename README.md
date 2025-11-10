@@ -1,6 +1,6 @@
 <div align="center" width="400px">
   <br />
-  <h3 align="center">Telco Customer Churn</h3>
+  <h3 align="center">Macroeconomic Analysis of Indian Economy using MoSPI Survey Data</h3>
   <h5 align="center"><img src="docs/assets/flying-cash.gif" height="48px"/></h5>
 
   <p align="center">
