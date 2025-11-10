@@ -4,6 +4,7 @@ export interface ChartCardProps {
     title: string;
     subtitle?: string;
     insights?: string;
+    sources?: string[];
     children: React.ReactNode;
 }
 

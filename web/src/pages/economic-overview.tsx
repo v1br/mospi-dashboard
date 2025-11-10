@@ -26,6 +26,7 @@ const EconomicOverview = () => {
           title={PageData.charts[0].title}
           subtitle={PageData.charts[0].description}
           insights={PageData.charts[0].summary}
+          sources={PageData.charts[0].sources}
         >
           <LineChart
             className='w-full md:w-1/2 h-60'
