@@ -7,7 +7,8 @@ const Home = () => {
         <div className='flex flex-col mt-24 p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
 
           <em className='text-secondary font-xs m-4'>
-            Project-1 · November 12, 2025
+            Project-1 · November 12, 2025 ·&nbsp;
+            <a href="https://github.com/v1br" target='_blank' rel='noopener noreferrer' className='hover:underline text-blue-600 visited:text-purple-600'>View Repository ☍</a>
           </em>
 
           <Heading>
@@ -18,16 +19,16 @@ const Home = () => {
 
           {/* Tags */}
           <div className='w-fit ml-4 mt-6 flex flex-row items-center justify-center gap-1 text-xs font-medium text-secondary'>
-            <Tag>
-                <em>Samarthya Alok</em>
+            <Tag to='https://github.com/Samarthya21'>
+                <em>Samarthya Alok 📚</em>
             </Tag>
             ●
-            <Tag>
-                <em>Abhinn Verma</em>
+            <Tag to='https://github.com/AbhinnV04'>
+                <em>Abhinn Verma 📊</em>
             </Tag>
             ●
-            <Tag>
-                <em>Vibhor Agrawal</em>
+            <Tag to='https://github.com/v1br'>
+                <em>Vibhor Agrawal 🖥️</em>
             </Tag>
           </div>
 

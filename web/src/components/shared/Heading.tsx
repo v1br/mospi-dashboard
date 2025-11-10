@@ -1,8 +1,5 @@
 import React from 'react'
-
-interface HeadingProps {
-    children: React.ReactNode;
-}
+import type { HeadingProps } from '../../types/types'
 
 const Heading: React.FC<HeadingProps> = ({
     children

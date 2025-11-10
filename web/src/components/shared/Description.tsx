@@ -1,8 +1,5 @@
 import React from 'react'
-
-interface DescriptionProps {
-    children: React.ReactNode
-}
+import type { DescriptionProps } from '../../types/types'
 
 const Description: React.FC<DescriptionProps> = ({
     children

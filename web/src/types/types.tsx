@@ -1,15 +1,32 @@
 import type { ChartDataset, Point } from "chart.js/auto";
 
-export interface ChartObjectI {
-    columns: string[];
-    plots: Plot[];
-    className?: string;
-    xlabel?: string;
-    ylabel?: string;
-    isHorizontal?: boolean;
+export interface ChartCardProps {
+    title: string;
+    subtitle?: string;
+    insights?: string;
+    children: React.ReactNode;
 }
 
-export type Plot = ChartDataset<
-	"bar" | "line",
-	(number | [number, number] | Point | null)[]
->;
+export interface DescriptionProps {
+    children: React.ReactNode
+}
+
+export interface HeadingProps {
+    children: React.ReactNode;
+}
+
+export interface TagProps {
+    to: string
+    children: React.ReactNode
+}
+
+export interface LineChartProps {
+    className?: string,
+    labels: string[];
+    datasets: ChartDataset<"line", (number | Point | null)[]>[];
+    indexAxis: "x" | "y";
+    xlabel?: string;
+    ylabel?: string;
+    legendDisplay?: boolean;
+    legendPosition?: "top" | "left" | "right" | "bottom" | "center";
+}

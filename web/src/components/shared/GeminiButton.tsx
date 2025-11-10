@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import { geminiHandler } from "../../handlers/gemini"
 import { Bot, BotOff } from "lucide-react"
 import { geminiHandler } from "../../handlers/gemini"
 

@@ -1,20 +1,19 @@
 import React from "react";
-
-interface ChartCardProps {
-    title: string;
-    subtitle?: string;
-    children: React.ReactNode;
-}
+import type { ChartCardProps } from "../../types/types";
 
 const ChartCard: React.FC<ChartCardProps> = ({
-    title, subtitle, children
+    title, subtitle, insights, children
 }) => {
 
     return (
-        <div className="bg-white p-4 w-full h-fit mx-auto border-2 border-green-300">
-            <h2 className="text-lg font-semibold text-secondary">{title}</h2>
-            {subtitle && <p className="text-sm text-secondary mb-2">{subtitle}</p>}
-            <div className="min-h-60">{children}</div>
+        <div className="flex flex-col md:flex-row w-[88%] h-fit gap-8 mx-4 p-4 bg-primary rounded-2xl">
+            {children}
+            <div className="w-full md:w-1/2 mb-4">
+                <h2 className="text-lg font-semibold text-secondary">{title}</h2>
+                <p className="text-sm/5 text-secondary italic">{subtitle??""}</p>
+                <hr className="my-4 border-1 border-secondary" />
+                <p className="text-xs text-secondary text-justify">{insights}</p>
+            </div>
         </div>
     );
 };
