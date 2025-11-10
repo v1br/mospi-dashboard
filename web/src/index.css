@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* Color palette */
+@layer utilities {
+  .bg-primary {
+    background-color: #eeeeee;
+  }
+  .bg-primary2 {
+    background-color: #ebe6e6;
+  }
+  .bg-secondary {
+    background-color: #47494b;
+  }
+  .bg-secondary2 {
+    background-color: #393e46;
+  }
+  .bg-focus {
+    background-color: #222831;
+  }
+  .bg-accent {
+    background-color: #ff5733;
+  }
+  .bg-accent2 {
+    background-color: #00adb5;
+  }
+  .text-primary {
+    color: #eeeeee;
+  }
+  .text-primary2 {
+    color: #ebe6e6;
+  }
+  .text-secondary {
+    color: #47494b;
+  }
+  .text-secondary2 {
+    color: #393e46;
+  }
+  .text-focus {
+    color: #222831;
+  }
+  .text-accent {
+    color: #ff5733;
+  }
+  .text-accent2 {
+    color: #00adb5;
+  }
+  .border-primary {
+    border-color: #eeeeee;
+  }
+  .border-primary2 {
+    border-color: #ebe6e6;
+  }
+  .border-secondary {
+    border-color: #47494b;
+  }
+  .border-secondary2 {
+    border-color: #393e46;
+  }
+  .border-focus {
+    border-color: #222831;
+  }
+  .border-accent {
+    border-color: #ff5733;
+  }
+  .border-accent2 {
+    border-color: #00adb5;
+  }
+}
+
+:root {
+
+  /* Typography & base */
+  font-family: 'Open Sans', ui-sans-serif, system-ui, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Color scheme */
+  color-scheme: light dark;
+  color: #393e46;
+  background-color: #ebe6e6;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}

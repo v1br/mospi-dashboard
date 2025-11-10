@@ -1,0 +1,17 @@
+import React from 'react'
+
+interface CardProps {
+    children: React.ReactNode
+}
+
+const Card: React.FC<CardProps> = ({
+    children
+}) => {
+  return (
+    <div className='flex flex-col items-center justify-center w-fit py-1 px-2 bg-secondary rounded-2xl text-primary text-center'>
+      {children}
+    </div>
+  )
+}
+
+export default Card
