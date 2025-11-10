@@ -11,8 +11,7 @@ export async function geminiHandler(
             model: "gemini-2.5-flash",
             contents: data,
         });
-        console.log(response.text);
-        return response.data;
+        return response.text;
           
 	} catch (error) {
 		console.error("POST handler error: ", error);

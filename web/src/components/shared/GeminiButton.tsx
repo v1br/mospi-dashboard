@@ -1,17 +1,45 @@
 import { useState } from "react"
 // import { geminiHandler } from "../../handlers/gemini"
 import { Bot, BotOff } from "lucide-react"
+import { geminiHandler } from "../../handlers/gemini"
 
 const GeminiButton = () => {
 
   const [isActive, setIsActive] = useState<boolean>(true)
+  const [geminiPrompt, setGeminiPrompt] = useState<string>("Hi! I am a Gemini-powered AI Assistant, here to answer your questions! 😀")
+  const [userInput, setUserInput] = useState<string>("");
+
+  const handleSubmit = async () => {
+    if (!userInput.trim()) return;
+
+    const query = userInput.trim();
+    setUserInput(""); // clear input
+    setGeminiPrompt("Thinking... 🤔");
+
+    try {
+      const response = await geminiHandler(query)
+      if (!response) throw Error;
+      setGeminiPrompt(response);
+
+    } catch (error) {
+      console.log(error)
+      setGeminiPrompt("Sorry, something went wrong. Please try again. 🙇🏼‍♀️");
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
 
   return (
+    <>
     <button 
-        className='fixed bottom-4 right-4 flex items-center justify-center bg-secondary text-primary w-16 h-16 p-2 rounded-full cursor-pointer'
+        className='fixed bottom-4 right-4 flex items-center justify-center bg-secondary text-primary w-16 h-16 p-2 rounded-full cursor-pointer z-50'
         onClick={() => {
           setIsActive(!isActive)
-          // geminiHandler("Introduce yourself.")}
         }}
     >
 
@@ -21,6 +49,25 @@ const GeminiButton = () => {
       }
 
     </button>
+
+    {isActive &&
+    <div className="fixed mx-4 md:mx-0 left-4 right-4 bottom-8 md:left-auto md:w-1/3 bg-secondary2 text-primary rounded-2xl shadow-lg p-6 flex flex-col gap-4 z-40">
+      <p id="dialogue-box" className="text-base md:text-xs font-medium leading-relaxed break-words whitespace-pre-wrap overflow-y-auto max-h-64">
+        {geminiPrompt}
+      </p>
+      <div className="flex flex-row items-center justify-center gap-2">
+        <textarea
+          id="user-input"
+          placeholder="Ask me something..."
+          className="flex-1 text-base md:text-xs focus:text-blue-300 focus:outline-none transition duration-200 ease-in-out"
+          onChange={(e) => setUserInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+          rows={2}
+        />
+      </div>
+    </div>
+    }
+    </>
   )
 }
 
