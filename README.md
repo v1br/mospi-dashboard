@@ -1,38 +1,35 @@
 <div align="center" width="400px">
-  <h3 align="center">Macroeconomic Analysis & Modelling</h3>
+  <br />
+  <h3 align="center">Telco Customer Churn</h3>
+  <h5 align="center"><img src="docs/assets/flying-cash.gif" height="48px"/></h5>
 
   <p align="center">
     <img src="https://img.shields.io/badge/jupyter-292929?logo=jupyter">
-    <img src="https://img.shields.io/badge/fastapi-292929?logo=fastapi">
     <img src="https://img.shields.io/badge/react-292929?logo=react">
     <img src="https://img.shields.io/badge/reactrouter-292929?logo=reactrouter">
     <img src="https://img.shields.io/badge/tailwind-292929?logo=tailwindcss">
     <img src="https://img.shields.io/badge/chart-292929?logo=chartdotjs">
   </p>
 
-  <h5 align="center"><img src="docs/assets/poster.gif" width="400px"></h5>
 </div>
 
 ---
 
-<b>Abstract</b>
-
+Abstract:
 <p align="left">
-  This project aims to build an interactive dashboard that visualizes and analyses key macroeconomic indicators of India using data from the National Accounts Statistics (NAS) and other official economic datasets. The goal is to provide a consolidated and user-friendly platform that highlights trends in GDP growth, sectoral contributions, consumption and investment patterns, government expenditure, trade balances, and savings over recent years. By combining statistical data with visualization and analytical tools, the project seeks to support a deeper understanding of India’s economic trajectory and provide stakeholders with evidence-based insights for research, policy, and education.
+  This project aims to build an interactive dashboard that visualizes and analyses key macroeconomic indicators of India using data from the National Accounts Statistics (NAS) and other official economic datasets. 
 </p>
 
 ---
 
-<b>Contributors</b>
+Frontend Tech Stack:
+- <a href="https://vite.dev/">Vite.js</a> for building & deploying the application.
+- <a href="https://react.dev/">React.js</a> for handling transitions & components.
+- <a href="https://tailwindcss.com/">Tailwind</a> for adding styles to the application.
+- <a href="https://www.chartjs.org/">Chart.js</a> for rendering dynamic charts and figures.
 
-<ul>
-  <li>
-    <a href='https://github.com/AbhinnV04'>Abhinn Verma</a> 
-  </li>
-  <li>
-    <a href='https://github.com/Samarthya21'>Samarthya Alok</a> 
-  </li>
-  <li>
-    <a href='https://github.com/v1br'>Vibhor Agrawal</a> 
-  </li>
-</ul>
+---
+
+<p align="center">
+  <a href="https://kopimi.com/" target="_blank" rel="noopener noreferer"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Kopimi_k.svg" width="24px" /></a>
+</p>
