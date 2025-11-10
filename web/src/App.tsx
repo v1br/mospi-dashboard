@@ -6,14 +6,14 @@ import InflationAndPrices from './pages/inflation-&-prices'
 import ForecastingAndScenarios from './pages/forecasting-&-scenarios'
 import MacroStability from './pages/macro-stability'
 import Navbar from './components/shared/Navbar'
-import GeminiButton from './components/interfaces/GeminiButton'
+import GeminiButton from './components/shared/GeminiButton'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <BrowserRouter>
 
-      <div className='flex flex-row min-h-screen'>
+      <div className='min-h-screen min-w-[96%] overflow-x-hidden'>
         {/* Navigation */}
         <Navbar />
 

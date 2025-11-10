@@ -1,10 +1,10 @@
 import Heading from '../components/shared/Heading'
 import Description from '../components/shared/Description'
-import Card from '../components/shared/Card'
+import Tag from '../components/shared/Tag'
 
 const Home = () => {
     return (
-        <div className='flex flex-col ml-72 mr-4 mt-4 h-fit'>
+        <div className='flex flex-col mt-24 p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
 
           <em className='text-secondary font-xs m-4'>
             Project-1 · November 12, 2025
@@ -17,18 +17,18 @@ const Home = () => {
           </Heading> 
 
           {/* Tags */}
-          <div className='w-fit ml-4 flex flex-row items-center justify-center gap-1 text-xs font-medium text-secondary'>
-            <Card>
+          <div className='w-fit ml-4 mt-6 flex flex-row items-center justify-center gap-1 text-xs font-medium text-secondary'>
+            <Tag>
                 <em>Samarthya Alok</em>
-            </Card>
+            </Tag>
             ●
-            <Card>
+            <Tag>
                 <em>Abhinn Verma</em>
-            </Card>
+            </Tag>
             ●
-            <Card>
+            <Tag>
                 <em>Vibhor Agrawal</em>
-            </Card>
+            </Tag>
           </div>
 
           <Description>

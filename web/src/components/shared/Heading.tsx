@@ -8,7 +8,7 @@ const Heading: React.FC<HeadingProps> = ({
     children
 }) => {
   return (
-    <h1 className='text-secondary text-4xl/12 font-bold mx-4 mt-2 mb-8'>
+    <h1 className='text-secondary text-4xl/12 font-bold mx-4 my-2'>
       {children}
     </h1>
   )

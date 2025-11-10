@@ -21,7 +21,7 @@
     background-color: #ff5733;
   }
   .bg-accent2 {
-    background-color: #00adb5;
+    background-color: #ff9233;
   }
   .text-primary {
     color: #eeeeee;
@@ -42,7 +42,7 @@
     color: #ff5733;
   }
   .text-accent2 {
-    color: #00adb5;
+    color: #ff9233;
   }
   .border-primary {
     border-color: #eeeeee;
@@ -63,7 +63,10 @@
     border-color: #ff5733;
   }
   .border-accent2 {
-    border-color: #00adb5;
+    border-color: #ff9233;
+  }
+  .outline-secondary {
+    outline-color: #47494b;
   }
 }
 

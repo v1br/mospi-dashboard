@@ -1,10 +1,10 @@
 import React from 'react'
 
-interface CardProps {
+interface TagProps {
     children: React.ReactNode
 }
 
-const Card: React.FC<CardProps> = ({
+const Tag: React.FC<TagProps> = ({
     children
 }) => {
   return (
@@ -14,4 +14,4 @@ const Card: React.FC<CardProps> = ({
   )
 }
 
-export default Card
+export default Tag
