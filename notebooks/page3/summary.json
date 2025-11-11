@@ -1,0 +1,41 @@
+{
+  "page_id": "inflation_page_3",
+  "page_title": "Inflation & Prices (2011–2024)",
+  "page_description": "Analysis of India's inflation dynamics through GDP deflator trends, price index behavior, and machine-learning-based inflation regime detection. Combines both statistical forecasting and unsupervised clustering to explain how price changes drive nominal growth and affect macroeconomic stability.",
+  "charts": [
+    {
+      "chart_id": "chart_deflator_forecast",
+      "title": "GDP Deflator Forecast (Prophet)",
+      "type": "forecast_line",
+      "sources": ["p-1", "p-5"],
+      "variables": ["GDP_Deflator", "yhat", "yhat_lower", "yhat_upper"],
+      "period": "2011–12 to 2026–27",
+      "units": "Index (2011–12 = 100)",
+      "description": "Prophet-based time series forecast of the GDP deflator, projecting inflation trends three years ahead with an 80% confidence band.",
+      "summary": "The GDP deflator has risen steadily from a base of 100 in 2011–12 to around 170 by 2023–24, reflecting sustained price growth. The Prophet forecast projects continued moderate inflation, with the index reaching roughly 190 by FY 2027. The forecast interval remains narrow, suggesting stable medium-term price expectations and a normalization trend following the 2021–22 price surge."
+    },
+    {
+      "chart_id": "chart_inflation_regime_timeline",
+      "title": "Inflation Regimes (by Cluster)",
+      "type": "categorical_timeline",
+      "sources": ["p-1", "p-5", "p-12"],
+      "variables": ["Deflator_YoY_pct", "Cluster_Label"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Yearly inflation regime classification using K-Means clustering on GDP deflator, CPI, and expenditure price indices. Color-coded by regime intensity (Low, Moderate, High).",
+      "summary": "The clustering model identifies three distinct inflation phases. The period 2013–15 shows high inflation above 7–8 %, driven by commodity price shocks. From 2016–20, inflation moderates below 4 %, marking a low-inflation phase. Post-2020 years exhibit mixed behavior — 2021–22 re-entering a high regime due to global supply shocks, followed by a moderation in 2023–24. Overall, the timeline captures cyclical inflation climates consistent with macroeconomic turning points."
+    },
+    {
+      "chart_id": "chart_pfce_vs_gfcf_regimes",
+      "title": "PFCE vs GFCF Inflation by Regime",
+      "type": "scatter",
+      "sources": ["p-12"],
+      "variables": ["PI_PFCE_YoY_pct", "PI_GFCF_YoY_pct", "Cluster_Label"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Scatter plot comparing inflation in private consumption (PFCE) and investment (GFCF), colored by inflation regime label from the clustering model.",
+      "summary": "Investment-related prices (GFCF) show greater volatility than consumption prices (PFCE), with high-inflation years marked by strong cost-push in capital goods. Low-inflation periods cluster tightly near 3–4 % for both, while moderate and high regimes expand outward, showing investment inflation as the main driver of regime transitions."
+    }
+  ],
+  "overall_insight": "Between 2011–12 and 2023–24, India’s price dynamics reveal three structural regimes — high inflation in early and post-pandemic years, low stable prices from 2016–20, and moderate normalization thereafter. The GDP deflator trend confirms a long-term upward drift aligned with nominal growth, while machine-learning clustering distinguishes clear inflation environments. Forecasts suggest inflation stabilizing around mid-single-digit levels through 2026–27, indicating controlled price momentum and improved policy anchoring."
+}
