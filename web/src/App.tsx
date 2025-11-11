@@ -7,6 +7,7 @@ import FAQs from './pages/faqs'
 import Navbar from './components/shared/Navbar'
 import GeminiButton from './components/shared/GeminiButton'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -27,6 +28,20 @@ function App() {
 
         {/* Chat */}
         <GeminiButton/>
+
+        {/* Toasts */}
+        <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 3500,
+          style: {
+            background: "#333",
+            color: "#fff",
+            fontSize: "0.9rem",
+            borderRadius: "8px",
+          },
+        }}
+      />
       </div>
 
     </BrowserRouter>

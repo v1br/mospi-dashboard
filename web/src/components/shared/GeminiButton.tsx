@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { Bot, BotOff } from "lucide-react"
 import { geminiHandler } from "../../handlers/gemini"
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+import toast from "react-hot-toast";
 
 const GeminiButton = () => {
 
@@ -16,6 +20,7 @@ const GeminiButton = () => {
     setGeminiPrompt("Thinking... 🤔");
 
     try {
+      toast.loading("Sending request... 🚛");
       const response = await geminiHandler(query)
       if (!response) throw Error;
       setGeminiPrompt(response);
@@ -23,6 +28,7 @@ const GeminiButton = () => {
     } catch (error) {
       console.log(error)
       setGeminiPrompt("Sorry, something went wrong. Please try again. 🙇🏼‍♀️");
+      toast.error("Gemini API is busy (rate-limit)... 🪅");
     }
   };
 
@@ -52,7 +58,9 @@ const GeminiButton = () => {
     {isActive &&
     <div className="fixed mx-4 md:mx-0 left-4 right-4 bottom-8 md:left-auto md:w-1/3 bg-secondary2 text-primary rounded-2xl shadow-lg p-6 flex flex-col gap-4 z-40">
       <p id="dialogue-box" className="text-base md:text-xs font-medium leading-relaxed break-words whitespace-pre-wrap overflow-y-auto max-h-64">
-        {geminiPrompt}
+        <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+          {geminiPrompt}
+        </ReactMarkdown>
       </p>
       <div className="flex flex-row items-center justify-center gap-2">
         <textarea
