@@ -4,7 +4,7 @@ import { geminiHandler } from "../../handlers/gemini"
 
 const GeminiButton = () => {
 
-  const [isActive, setIsActive] = useState<boolean>(true)
+  const [isActive, setIsActive] = useState<boolean>(false)
   const [geminiPrompt, setGeminiPrompt] = useState<string>("Hi! I am a Gemini-powered AI Assistant, here to answer your questions! 😀")
   const [userInput, setUserInput] = useState<string>("");
 

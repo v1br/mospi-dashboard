@@ -46,13 +46,21 @@ const LineChart: React.FC<LineChartProps> = ({
                 display: legendDisplay ?? true,
                 position: legendPosition ?? "top",
                 labels: {
-                    color: "black",
-                    font: { size: 14 },
-                    boxWidth: 16,
-                    boxHeight: 8,
+                    font: {
+                      size: 10,
+                    },
+                    boxWidth: 10,
+                    boxHeight: 5,
+                    padding: 8,
+                    color: "#444",
                     usePointStyle: false,
-                    pointStyle: "circle",
-                },
+                  },
+            },
+            filler: {
+                propagate: true,
+            },
+            tooltip: {
+                enabled: true,
             },
         },
     }),
