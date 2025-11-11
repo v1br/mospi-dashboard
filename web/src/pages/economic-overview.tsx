@@ -15,7 +15,7 @@ import ImgData5 from '../data/values/box-plot-growth.json'
 
 const EconomicOverview = () => {
     return (
-      <div className='flex flex-col mt-24 p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
+      <div className='flex flex-col mt-24 md:p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
 
         <em className='text-secondary font-xs m-4'>
           Chapter {PageData.page_id} ·&nbsp;

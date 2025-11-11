@@ -5,7 +5,7 @@ import Tag from '../components/shared/Tag'
 
 const Home = () => {
     return (
-        <div className='flex flex-col mt-24 p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
+        <div className='flex flex-col mt-24 md:p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
 
           <em className='text-secondary font-xs m-4'>
             Project-1 · November 12, 2025 ·&nbsp;
