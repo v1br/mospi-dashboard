@@ -1,10 +1,13 @@
 import Description from '../components/shared/Description'
 import Heading from '../components/shared/Heading'
+import Footer from '../components/shared/Footer'
 import ForecastLineChart from '../components/interfaces/ForecastLineChart'
 import ScatterPlotChart from '../components/interfaces/ScatterPlotChart'
+import CategoricalTimelineChart from '../components/interfaces/CategoricalTimelineChart'
 import ChartCard from '../components/shared/ChartCard'
 import PageData from '../data/metadata/inflation-&-prices.json'
 import ImgData1 from '../data/values/forecast-deflator.json'
+import ImgData2 from '../data/values/timeline-inflation.json'
 import ImgData3 from '../data/values/scatter-inflation.json'
 
 const ProductionComposition = () => {
@@ -86,7 +89,16 @@ const ProductionComposition = () => {
           sources={PageData.charts[1].sources}
           flip={true}
         >
-          h
+          <CategoricalTimelineChart
+            className="w-full md:w-1/2 h-56 md:h-72"
+            labels={ImgData2.year}
+            values={ImgData2.deflator_yoy_pct}
+            categories={ImgData2.regime}
+            xlabel="Year"
+            ylabel="Deflator YoY %"
+            legendDisplay={true}
+            legendPosition="right"
+          />
         </ChartCard>
 
         <ChartCard
@@ -97,8 +109,8 @@ const ProductionComposition = () => {
         >
           <ScatterPlotChart
             className="w-full md:w-1/2 h-56 md:h-72"
-            xlabel="X Axis Label"
-            ylabel="Y Axis Label"
+            xlabel="PFCE YoY %"
+            ylabel="GFCF YoY %"
             legendDisplay={true}
             legendPosition="bottom"
             datasets={[
@@ -130,6 +142,8 @@ const ProductionComposition = () => {
         <Description>
           {PageData.overall_insight}
         </Description>
+
+        <Footer/>
       </div>
       )
 }

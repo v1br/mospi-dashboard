@@ -1,5 +1,6 @@
 import Description from '../components/shared/Description'
 import Heading from '../components/shared/Heading'
+import Footer from '../components/shared/Footer'
 import LineChart from '../components/interfaces/LineChart'
 import StackedAreaChart from '../components/interfaces/StackedArea'
 import ForecastLineChart from '../components/interfaces/ForecastLineChart'
@@ -179,6 +180,8 @@ const ProductionComposition = () => {
         <Description>
           {PageData.overall_insight}
         </Description>
+
+        <Footer/>
       </div>
       )
 }

@@ -1,5 +1,6 @@
 import Heading from '../components/shared/Heading'
 import Description from '../components/shared/Description'
+import Footer from '../components/shared/Footer'
 import Tag from '../components/shared/Tag'
 
 const Home = () => {
@@ -73,6 +74,8 @@ const Home = () => {
               </dd>
             </dl>
           </Description>
+
+          <Footer/>
         </div>
       )
 }

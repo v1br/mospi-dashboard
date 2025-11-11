@@ -1,5 +1,6 @@
 import Description from '../components/shared/Description'
 import Heading from '../components/shared/Heading'
+import Footer from '../components/shared/Footer'
 import LineChart from '../components/interfaces/LineChart'
 import DualLineChart from '../components/interfaces/DualLineChart'
 import StackedAreaChart from '../components/interfaces/StackedArea'
@@ -239,6 +240,8 @@ const EconomicOverview = () => {
         <Description>
           {PageData.overall_insight}
         </Description>
+
+        <Footer/>
       </div>
       )
 }

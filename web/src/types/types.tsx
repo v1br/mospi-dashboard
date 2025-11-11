@@ -114,3 +114,14 @@ export interface ScatterPlotChartProps {
   legendDisplay?: boolean;
   legendPosition?: "top" | "bottom" | "left" | "right";
 }
+
+export interface CategoricalTimelineChartProps {
+  className?: string;
+  labels: string[];
+  values: number[];
+  categories: string[];
+  xlabel?: string;
+  ylabel?: string;
+  legendDisplay?: boolean;
+  legendPosition?: "top" | "bottom" | "left" | "right";
+}
