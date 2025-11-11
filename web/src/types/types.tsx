@@ -98,3 +98,19 @@ export interface ForecastLineChartProps {
   legendPosition?: "top" | "bottom" | "left" | "right";
 }
 
+export interface ScatterPlotChartProps {
+  className?: string;
+  datasets: {
+    label: string;
+    data: { x: number; y: number }[];
+    borderColor?: string;
+    backgroundColor?: string;
+    pointRadius?: number;
+    pointHoverRadius?: number;
+    showLine?: boolean;
+  }[];
+  xlabel?: string;
+  ylabel?: string;
+  legendDisplay?: boolean;
+  legendPosition?: "top" | "bottom" | "left" | "right";
+}

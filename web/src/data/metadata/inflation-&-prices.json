@@ -1,64 +1,41 @@
 {
-    "page_id": "3",
-    "page_title": "Inflation & Prices",
-    "page_description": "Summarized visualization data and interpretations for India's macroeconomic indicators — GDP, inflation, expenditure composition, and income — based on National Accounts Statistics (MoSPI).",
-    "charts": [
-      {
-        "chart_id": "chart_nominal_vs_real_gdp",
-        "title": "Nominal vs Real GDP (Levels)",
-        "type": "line",
-        "sources": ["p-1", "p-5"],
-        "variables": ["Nominal_GDP", "Real_GDP"],
-        "period": "2011-12 to 2023-24",
-        "units": "₹ crore",
-        "description": "Shows GDP at current and constant prices over time, comparing nominal and real output levels.",
-        "summary": "Both nominal and real GDP have grown steadily, but nominal GDP increases faster, reflecting inflation effects. A sharp post-2021 rebound is evident, with nominal GDP accelerating more strongly due to price inflation. The real GDP series flattens around 2019-21, consistent with pre-COVID slowdown and pandemic contraction."
-      },
-      {
-        "chart_id": "chart_growth_vs_cpi",
-        "title": "GDP Growth (Real & Nominal) vs CPI",
-        "type": "dual_axis_line",
-        "sources": ["p-5", "p-12"],
-        "variables": ["Real_Growth_pct", "Nominal_Growth_pct", "CPI_Combined"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent (growth), Index (CPI)",
-        "description": "Compares annual GDP growth rates (real and nominal) with consumer inflation, illustrating how price changes influence nominal growth.",
-        "summary": "Real GDP growth remained around 5-8% for most years, with a deep contraction in 2020-21 followed by a sharp recovery. Nominal GDP growth consistently exceeds real growth, driven by inflation as shown by the rising CPI index. The widening post-2021 gap indicates that a significant portion of nominal growth reflects price effects rather than pure output expansion."
-      },
-      {
-        "chart_id": "chart_expenditure_composition",
-        "title": "Expenditure Composition (% of Nominal GDP)",
-        "type": "stacked_area",
-        "sources": ["p-1", "p-3"],
-        "variables": ["PFCE_pctGDP", "GFCE_pctGDP", "GFCF_pctGDP", "Net_Exports_pctGDP"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent of GDP",
-        "description": "Breaks down GDP by major expenditure components to show relative contributions of consumption, investment, and net exports.",
-        "summary": "Private consumption (PFCE) dominates GDP, averaging 55-60% of total expenditure. Government spending (GFCE) is stable near 10%, and investment (GFCF) contributes roughly 30%. Net exports remain negative throughout, reflecting a persistent trade deficit that narrows slightly after 2020. India's growth remains consumption-led with gradual recovery in investment post-pandemic."
-      },
-      {
-        "chart_id": "chart_percapita",
-        "title": "Per Capita Income (Nominal)",
-        "type": "line",
-        "sources": ["p-9", "p-10"],
-        "variables": ["Per_Capita"],
-        "period": "2011-12 to 2023-24",
-        "units": "₹ per person",
-        "description": "Shows the trend of nominal per-capita income over time, reflecting average income levels before adjusting for inflation.",
-        "summary": "Nominal per-capita income has risen steadily from about ₹70,000 in 2011-12 to over ₹2 lakh by 2023-24, nearly tripling in twelve years. The dip in 2020-21 corresponds to the COVID-19 shock, followed by a strong recovery. Inflation-adjusted gains would be smaller, but nominally, India's income growth trajectory remains upward and resilient."
-      },
-      {
-        "chart_id": "chart_growths_boxplot",
-        "title": "Distribution: Growth Rates (Real vs Nominal)",
-        "type": "boxplot",
-        "sources": ["p-1", "p-5"],
-        "variables": ["Real_Growth_pct", "Nominal_Growth_pct"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent (%)",
-        "description": "Summarizes the distribution and variability of real and nominal GDP growth rates across the observation period.",
-        "summary": "Real GDP growth shows a median around 7% with moderate volatility and a pandemic-driven outlier near -6%. Nominal GDP growth centers near 10-11% but with a wider spread, reflecting inflation cycles. The upward shift of the nominal distribution relative to the real confirms that inflation systematically lifts nominal growth rates."
-      }
-    ],
-    "overall_insight": "From 2011-12 to 2023-24, India's nominal GDP and per-capita income have expanded sharply, with inflation accounting for part of the nominal rise. Real growth remains strong on average but shows pandemic disruption. The economy is predominantly consumption-driven, with investment recovering post-2020. Inflation (CPI) trends closely track the widening gap between nominal and real measures, underlining the role of price dynamics in headline GDP growth."
-  }
-  
+  "page_id": "3",
+  "page_title": "Inflation & Prices",
+  "page_description": "Analysis of India's inflation dynamics through GDP deflator trends, price index behavior, and machine-learning-based inflation regime detection. Combines both statistical forecasting and unsupervised clustering to explain how price changes drive nominal growth and affect macroeconomic stability.",
+  "charts": [
+    {
+      "chart_id": "chart_deflator_forecast",
+      "title": "GDP Deflator Forecast (Prophet)",
+      "type": "forecast_line",
+      "sources": ["p-1", "p-5"],
+      "variables": ["GDP_Deflator", "yhat", "yhat_lower", "yhat_upper"],
+      "period": "2011–12 to 2026–27",
+      "units": "Index (2011–12 = 100)",
+      "description": "Prophet-based time series forecast of the GDP deflator, projecting inflation trends three years ahead with an 80% confidence band.",
+      "summary": "The GDP deflator has risen steadily from a base of 100 in 2011–12 to around 170 by 2023–24, reflecting sustained price growth. The Prophet forecast projects continued moderate inflation, with the index reaching roughly 190 by FY 2027. The forecast interval remains narrow, suggesting stable medium-term price expectations and a normalization trend following the 2021–22 price surge."
+    },
+    {
+      "chart_id": "chart_inflation_regime_timeline",
+      "title": "Inflation Regimes (by Cluster)",
+      "type": "categorical_timeline",
+      "sources": ["p-1", "p-5", "p-12"],
+      "variables": ["Deflator_YoY_pct", "Cluster_Label"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Yearly inflation regime classification using K-Means clustering on GDP deflator, CPI, and expenditure price indices. Color-coded by regime intensity (Low, Moderate, High).",
+      "summary": "The clustering model identifies three distinct inflation phases. The period 2013–15 shows high inflation above 7–8 %, driven by commodity price shocks. From 2016–20, inflation moderates below 4 %, marking a low-inflation phase. Post-2020 years exhibit mixed behavior — 2021–22 re-entering a high regime due to global supply shocks, followed by a moderation in 2023–24. Overall, the timeline captures cyclical inflation climates consistent with macroeconomic turning points."
+    },
+    {
+      "chart_id": "chart_pfce_vs_gfcf_regimes",
+      "title": "PFCE vs GFCF Inflation by Regime",
+      "type": "scatter",
+      "sources": ["p-12"],
+      "variables": ["PI_PFCE_YoY_pct", "PI_GFCF_YoY_pct", "Cluster_Label"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Scatter plot comparing inflation in private consumption (PFCE) and investment (GFCF), colored by inflation regime label from the clustering model.",
+      "summary": "Investment-related prices (GFCF) show greater volatility than consumption prices (PFCE), with high-inflation years marked by strong cost-push in capital goods. Low-inflation periods cluster tightly near 3–4 % for both, while moderate and high regimes expand outward, showing investment inflation as the main driver of regime transitions."
+    }
+  ],
+  "overall_insight": "Between 2011–12 and 2023–24, India’s price dynamics reveal three structural regimes — high inflation in early and post-pandemic years, low stable prices from 2016–20, and moderate normalization thereafter. The GDP deflator trend confirms a long-term upward drift aligned with nominal growth, while machine-learning clustering distinguishes clear inflation environments. Forecasts suggest inflation stabilizing around mid-single-digit levels through 2026–27, indicating controlled price momentum and improved policy anchoring."
+}
