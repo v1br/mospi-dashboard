@@ -4,6 +4,8 @@ export interface ChartCardProps {
     title: string;
     subtitle?: string;
     insights?: string;
+    sources?: string[];
+    flip?: boolean;
     children: React.ReactNode;
 }
 
@@ -30,3 +32,50 @@ export interface LineChartProps {
     legendDisplay?: boolean;
     legendPosition?: "top" | "left" | "right" | "bottom" | "center";
 }
+
+export interface DualLineChartProps {
+    className?: string,
+    labels: string[];
+    datasets: ChartDataset<"line", (number | Point | null)[]>[];
+    indexAxis: "x" | "y";
+    xlabel?: string;
+    ylabel?: string;
+    ylabel2?: string;
+    legendDisplay?: boolean;
+    legendPosition?: "top" | "left" | "right" | "bottom" | "center";
+}
+
+export interface StackedAreaChartProps {
+  className?: string;
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor?: string;
+    backgroundColor?: string;
+    fill?: boolean | string | object;
+    tension?: number;
+  }[];
+  xlabel?: string;
+  ylabel?: string;
+  legendDisplay?: boolean;
+  legendPosition?: "top" | "bottom" | "left" | "right";
+}
+
+export interface BoxPlotChartProps {
+    className?: string;
+    labels: string[];
+    datasets: {
+      label: string;
+      data: number[][]; // each box’s dataset
+      borderColor?: string;
+      backgroundColor?: string;
+      outlierColor?: string;
+      borderWidth?: number;
+    }[];
+    xlabel?: string;
+    ylabel?: string;
+    legendDisplay?: boolean;
+    legendPosition?: "top" | "bottom" | "left" | "right";
+  }
+  

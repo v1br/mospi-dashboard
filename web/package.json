@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
+    "@sgratzl/chartjs-chart-boxplot": "^4.4.5",
     "@tailwindcss/vite": "^4.1.16",
     "chart.js": "^4.5.1",
     "chartjs": "^0.3.24",

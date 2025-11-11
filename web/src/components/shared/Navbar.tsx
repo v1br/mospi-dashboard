@@ -62,12 +62,12 @@ const Navbar = () => {
               </li>
             </Link>
             <Link to="/forecasting-&-scenarios" onClick={() => setCurrentPage(4)}>
-              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "text-blue-200" : ""}`}>
+              <li className={`hidden flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "text-blue-200" : ""}`}>
                 <BookText/>Forecasting & Scenarios
               </li>
             </Link>
             <Link to="/macro-stability" onClick={() => setCurrentPage(5)}>
-              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 5? "text-blue-200" : ""}`}>
+              <li className={`hidden flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 5? "text-blue-200" : ""}`}>
                 <BookText/>Macro Stability
               </li>
             </Link>
@@ -100,12 +100,12 @@ const Navbar = () => {
               </li>
             </Link>
             <Link to="/forecasting-&-scenarios" onClick={() => setCurrentPage(4)}>
-              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "bg-focus" : ""}`}>
+              <li className={`hidden flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "bg-focus" : ""}`}>
                 <BookText/>Forecasting & Scenarios
               </li>
             </Link>
             <Link to="/macro-stability" onClick={() => setCurrentPage(5)}>
-              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 5? "bg-focus" : ""}`}>
+              <li className={`hidden flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 5? "bg-focus" : ""}`}>
                 <BookText/>Macro Stability
               </li>
             </Link>

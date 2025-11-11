@@ -27,7 +27,7 @@
       },
       {
         "chart_id": "chart_expenditure_composition",
-        "title": "Expenditure Composition (% of Nominal GDP)",
+        "title": "Expenditure Composition (% of NGDP)",
         "type": "stacked_area",
         "sources": ["p-1", "p-3"],
         "variables": ["PFCE_pctGDP", "GFCE_pctGDP", "GFCF_pctGDP", "Net_Exports_pctGDP"],
