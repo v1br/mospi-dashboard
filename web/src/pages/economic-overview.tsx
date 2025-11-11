@@ -19,7 +19,7 @@ const EconomicOverview = () => {
 
         <em className='text-secondary font-xs m-4'>
           Chapter {PageData.page_id} ·&nbsp;
-            <a href="https://github.com/v1br" target='_blank' rel='noopener noreferrer' className='hover:underline text-blue-600 visited:text-purple-600'>Refer Notebook ☍</a>
+            <a href="https://github.com/v1br/mospi-dashboard/blob/main/notebooks/page1/page1.ipynb" target='_blank' rel='noopener noreferrer' className='hover:underline text-blue-600 visited:text-purple-600'>Refer Notebook ☍</a>
         </em>
 
         <Heading>

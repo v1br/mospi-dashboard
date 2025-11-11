@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { House, BookText, CircleEllipsis, CircleX } from "lucide-react"
+import { House, BookText, BadgeQuestionMark, CircleEllipsis, CircleX } from "lucide-react"
 
 const Navbar = () => {
 
@@ -61,6 +61,11 @@ const Navbar = () => {
                 <BookText/>Inflation & Prices
               </li>
             </Link>
+            <Link to="/faqs" onClick={() => setCurrentPage(4)}>
+              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "text-blue-200" : ""}`}>
+                <BadgeQuestionMark/>FAQs
+              </li>
+            </Link>
           </ul>
         }
 
@@ -87,6 +92,11 @@ const Navbar = () => {
             <Link to="/inflation-&-prices" onClick={() => setCurrentPage(3)}>
               <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 3? "bg-focus" : ""}`}>
                 <BookText/>Inflation & Prices
+              </li>
+            </Link>
+            <Link to="/faqs" onClick={() => setCurrentPage(4)}>
+              <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 4? "bg-focus" : ""}`}>
+                <BadgeQuestionMark/>FAQs
               </li>
             </Link>
         </ul>

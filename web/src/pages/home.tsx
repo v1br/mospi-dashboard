@@ -9,7 +9,7 @@ const Home = () => {
 
           <em className='text-secondary font-xs m-4'>
             Project-1 · November 12, 2025 ·&nbsp;
-            <a href="https://github.com/v1br" target='_blank' rel='noopener noreferrer' className='hover:underline text-blue-600 visited:text-purple-600'>View Repository ☍</a>
+            <a href="https://github.com/v1br/mospi-dashboard" target='_blank' rel='noopener noreferrer' className='hover:underline text-blue-600 visited:text-purple-600'>View Repository ☍</a>
           </em>
 
           <Heading>
