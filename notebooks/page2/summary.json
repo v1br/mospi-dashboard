@@ -1,0 +1,41 @@
+{
+  "page_id": "production_page_2",
+  "page_title": "Production / GDP Composition (2011–2024)",
+  "page_description": "Analysis of India's real GDP structure and sectoral composition using Gross Value Added (GVA) and Quantum Indices data at constant prices. Highlights sectoral contributions, growth patterns, and a short-term GDP forecast based on Prophet modeling.",
+  "charts": [
+    {
+      "chart_id": "chart_sectoral_composition_qi",
+      "title": "Sectoral Composition (Share of Total QI, %)",
+      "type": "stacked_area",
+      "sources": ["p-12"],
+      "variables": ["Agri_Share_%", "Ind_Share_%", "Serv_Share_%"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent of total Quantum Index (volume measure)",
+      "description": "Displays how agriculture, industry, and services contribute to overall production volume (Quantum Index) over time.",
+      "summary": "Services consistently dominate India's production structure, accounting for roughly 55–60% of total volume by 2023–24. Industry maintains a steady share near 30%, while agriculture’s share declines gradually toward 10%. The stacked profile indicates long-term structural transformation toward a service-led economy with moderate industrial stability."
+    },
+    {
+      "chart_id": "chart_sectoral_growth_qi",
+      "title": "Sectoral Growth Rates (YoY % change, QI-based)",
+      "type": "line",
+      "sources": ["p-12"],
+      "variables": ["Agri_Growth_%", "Ind_Growth_%", "Serv_Growth_%"],
+      "period": "2012–13 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Year-on-year real growth rates for agriculture, industry, and services based on Quantum Index data.",
+      "summary": "Growth trends show services as the most stable driver, averaging around 7–8% annually. Industry exhibits larger cyclical swings, with a sharp contraction in 2020–21 and a strong rebound above 10% the following year. Agriculture remains the most volatile, alternating between low positive and near-zero growth. The combined pattern highlights services’ resilience and industry’s sensitivity to shocks."
+    },
+    {
+      "chart_id": "chart_gdp_forecast_prophet",
+      "title": "Real GDP Forecast (Prophet, Constant Prices)",
+      "type": "forecast_line",
+      "sources": ["p-5"],
+      "variables": ["GDP_Constant", "yhat", "yhat_lower", "yhat_upper"],
+      "period": "2011–12 to 2026–27",
+      "units": "₹ crore (2011–12 constant prices)",
+      "description": "Prophet model forecast of India's real GDP based on annual constant-price data with 3-year horizon and 80% confidence interval.",
+      "summary": "The Prophet model tracks actual GDP closely with an average relative error near 3%. It projects continued real GDP expansion through 2026–27 at roughly 6–7% annual growth. The confidence interval widens modestly, indicating stable medium-term predictability. Pandemic disruptions are well-captured as temporary deviations within the overall trend recovery."
+    }
+  ],
+  "overall_insight": "Between 2011–12 and 2023–24, India's production structure shows a decisive shift toward services, which now account for over half of real output. Industry remains the second pillar, while agriculture’s contribution continues to shrink in relative terms. Despite short-term volatility, particularly during 2020–21, aggregate production growth has regained its pre-pandemic trajectory. Forecasts suggest sustained medium-term expansion driven primarily by services and recovering industrial momentum."
+}
