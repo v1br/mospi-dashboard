@@ -1,64 +1,41 @@
 {
-    "page_id": "2",
-    "page_title": "Expenditure Composition",
-    "page_description": "Summarized visualization data and interpretations for India's macroeconomic indicators — GDP, inflation, expenditure composition, and income — based on National Accounts Statistics (MoSPI).",
-    "charts": [
-      {
-        "chart_id": "chart_nominal_vs_real_gdp",
-        "title": "Nominal vs Real GDP (Levels)",
-        "type": "line",
-        "sources": ["p-1", "p-5"],
-        "variables": ["Nominal_GDP", "Real_GDP"],
-        "period": "2011-12 to 2023-24",
-        "units": "₹ crore",
-        "description": "Shows GDP at current and constant prices over time, comparing nominal and real output levels.",
-        "summary": "Both nominal and real GDP have grown steadily, but nominal GDP increases faster, reflecting inflation effects. A sharp post-2021 rebound is evident, with nominal GDP accelerating more strongly due to price inflation. The real GDP series flattens around 2019-21, consistent with pre-COVID slowdown and pandemic contraction."
-      },
-      {
-        "chart_id": "chart_growth_vs_cpi",
-        "title": "GDP Growth (Real & Nominal) vs CPI",
-        "type": "dual_axis_line",
-        "sources": ["p-5", "p-12"],
-        "variables": ["Real_Growth_pct", "Nominal_Growth_pct", "CPI_Combined"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent (growth), Index (CPI)",
-        "description": "Compares annual GDP growth rates (real and nominal) with consumer inflation, illustrating how price changes influence nominal growth.",
-        "summary": "Real GDP growth remained around 5-8% for most years, with a deep contraction in 2020-21 followed by a sharp recovery. Nominal GDP growth consistently exceeds real growth, driven by inflation as shown by the rising CPI index. The widening post-2021 gap indicates that a significant portion of nominal growth reflects price effects rather than pure output expansion."
-      },
-      {
-        "chart_id": "chart_expenditure_composition",
-        "title": "Expenditure Composition (% of Nominal GDP)",
-        "type": "stacked_area",
-        "sources": ["p-1", "p-3"],
-        "variables": ["PFCE_pctGDP", "GFCE_pctGDP", "GFCF_pctGDP", "Net_Exports_pctGDP"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent of GDP",
-        "description": "Breaks down GDP by major expenditure components to show relative contributions of consumption, investment, and net exports.",
-        "summary": "Private consumption (PFCE) dominates GDP, averaging 55-60% of total expenditure. Government spending (GFCE) is stable near 10%, and investment (GFCF) contributes roughly 30%. Net exports remain negative throughout, reflecting a persistent trade deficit that narrows slightly after 2020. India's growth remains consumption-led with gradual recovery in investment post-pandemic."
-      },
-      {
-        "chart_id": "chart_percapita",
-        "title": "Per Capita Income (Nominal)",
-        "type": "line",
-        "sources": ["p-9", "p-10"],
-        "variables": ["Per_Capita"],
-        "period": "2011-12 to 2023-24",
-        "units": "₹ per person",
-        "description": "Shows the trend of nominal per-capita income over time, reflecting average income levels before adjusting for inflation.",
-        "summary": "Nominal per-capita income has risen steadily from about ₹70,000 in 2011-12 to over ₹2 lakh by 2023-24, nearly tripling in twelve years. The dip in 2020-21 corresponds to the COVID-19 shock, followed by a strong recovery. Inflation-adjusted gains would be smaller, but nominally, India's income growth trajectory remains upward and resilient."
-      },
-      {
-        "chart_id": "chart_growths_boxplot",
-        "title": "Distribution: Growth Rates (Real vs Nominal)",
-        "type": "boxplot",
-        "sources": ["p-1", "p-5"],
-        "variables": ["Real_Growth_pct", "Nominal_Growth_pct"],
-        "period": "2011-12 to 2023-24",
-        "units": "Percent (%)",
-        "description": "Summarizes the distribution and variability of real and nominal GDP growth rates across the observation period.",
-        "summary": "Real GDP growth shows a median around 7% with moderate volatility and a pandemic-driven outlier near -6%. Nominal GDP growth centers near 10-11% but with a wider spread, reflecting inflation cycles. The upward shift of the nominal distribution relative to the real confirms that inflation systematically lifts nominal growth rates."
-      }
-    ],
-    "overall_insight": "From 2011-12 to 2023-24, India's nominal GDP and per-capita income have expanded sharply, with inflation accounting for part of the nominal rise. Real growth remains strong on average but shows pandemic disruption. The economy is predominantly consumption-driven, with investment recovering post-2020. Inflation (CPI) trends closely track the widening gap between nominal and real measures, underlining the role of price dynamics in headline GDP growth."
-  }
-  
+  "page_id": "2",
+  "page_title": "Production Composition",
+  "page_description": "Analysis of India's real GDP structure and sectoral composition using Gross Value Added (GVA) and Quantum Indices data at constant prices. Highlights sectoral contributions, growth patterns, and a short-term GDP forecast based on Prophet modeling.",
+  "charts": [
+    {
+      "chart_id": "chart_sectoral_composition_qi",
+      "title": "Sectoral Composition (Share of Total QI, %)",
+      "type": "stacked_area",
+      "sources": ["p-12"],
+      "variables": ["Agri_Share_%", "Ind_Share_%", "Serv_Share_%"],
+      "period": "2011–12 to 2023–24",
+      "units": "Percent of total Quantum Index (volume measure)",
+      "description": "Displays how agriculture, industry, and services contribute to overall production volume (Quantum Index) over time.",
+      "summary": "Services consistently dominate India's production structure, accounting for roughly 55–60% of total volume by 2023–24. Industry maintains a steady share near 30%, while agriculture’s share declines gradually toward 10%. The stacked profile indicates long-term structural transformation toward a service-led economy with moderate industrial stability."
+    },
+    {
+      "chart_id": "chart_sectoral_growth_qi",
+      "title": "Sectoral Growth Rates (YoY% change : QI)",
+      "type": "line",
+      "sources": ["p-12"],
+      "variables": ["Agri_Growth_%", "Ind_Growth_%", "Serv_Growth_%"],
+      "period": "2012–13 to 2023–24",
+      "units": "Percent (%)",
+      "description": "Year-on-year real growth rates for agriculture, industry, and services based on Quantum Index data.",
+      "summary": "Growth trends show services as the most stable driver, averaging around 7–8% annually. Industry exhibits larger cyclical swings, with a sharp contraction in 2020–21 and a strong rebound above 10% the following year. Agriculture remains the most volatile, alternating between low positive and near-zero growth. The combined pattern highlights services’ resilience and industry’s sensitivity to shocks."
+    },
+    {
+      "chart_id": "chart_gdp_forecast_prophet",
+      "title": "Real GDP Forecast (Prophet, Constant Prices)",
+      "type": "forecast_line",
+      "sources": ["p-5"],
+      "variables": ["GDP_Constant", "yhat", "yhat_lower", "yhat_upper"],
+      "period": "2011–12 to 2026–27",
+      "units": "₹ crore (2011–12 constant prices)",
+      "description": "Prophet model forecast of India's real GDP based on annual constant-price data with 3-year horizon and 80% confidence interval.",
+      "summary": "The Prophet model tracks actual GDP closely with an average relative error near 3%. It projects continued real GDP expansion through 2026–27 at roughly 6–7% annual growth. The confidence interval widens modestly, indicating stable medium-term predictability. Pandemic disruptions are well-captured as temporary deviations within the overall trend recovery."
+    }
+  ],
+  "overall_insight": "Between 2011–12 and 2023–24, India's production structure shows a decisive shift toward services, which now account for over half of real output. Industry remains the second pillar, while agriculture’s contribution continues to shrink in relative terms. Despite short-term volatility, particularly during 2020–21, aggregate production growth has regained its pre-pandemic trajectory. Forecasts suggest sustained medium-term expansion driven primarily by services and recovering industrial momentum."
+}

@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './pages/home'
 import EconomicOverview from './pages/economic-overview'
-import ExpenditureComposition from './pages/expenditure-composition'
+import ProductionComposition from './pages/production-composition'
 import InflationAndPrices from './pages/inflation-&-prices'
 import ForecastingAndScenarios from './pages/forecasting-&-scenarios'
 import MacroStability from './pages/macro-stability'
@@ -21,7 +21,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/economic-overview" element={<EconomicOverview />} />
-            <Route path="/expenditure-composition" element={<ExpenditureComposition />} />
+            <Route path="/production-composition" element={<ProductionComposition />} />
             <Route path="/inflation-&-prices" element={<InflationAndPrices />} />
             <Route path="/forecasting-&-scenarios" element={<ForecastingAndScenarios />} />
             <Route path="/macro-stability" element={<MacroStability />} />

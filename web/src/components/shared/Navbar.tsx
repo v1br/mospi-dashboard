@@ -51,9 +51,9 @@ const Navbar = () => {
                 <BookText/>Economic Overview
               </li>
             </Link>
-            <Link to="/expenditure-composition" onClick={() => setCurrentPage(2)}>
+            <Link to="/production-composition" onClick={() => setCurrentPage(2)}>
               <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 2? "text-blue-200" : ""}`}>
-                <BookText/>Expenditure Composition
+                <BookText/>Production Composition
               </li>
             </Link>
             <Link to="/inflation-&-prices" onClick={() => setCurrentPage(3)}>
@@ -89,9 +89,9 @@ const Navbar = () => {
                 <BookText/>Economic Overview
               </li>
             </Link>
-            <Link to="/expenditure-composition" onClick={() => setCurrentPage(2)}>
+            <Link to="/production-composition" onClick={() => setCurrentPage(2)}>
               <li className={`flex flex-row p-4 gap-2 rounded-2xl ${currentPage === 2? "bg-focus" : ""}`}>
-                <BookText/>Expenditure Composition
+                <BookText/>Production Composition
               </li>
             </Link>
             <Link to="/inflation-&-prices" onClick={() => setCurrentPage(3)}>
