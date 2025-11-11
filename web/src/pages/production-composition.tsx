@@ -2,12 +2,15 @@ import Description from '../components/shared/Description'
 import Heading from '../components/shared/Heading'
 import LineChart from '../components/interfaces/LineChart'
 import StackedAreaChart from '../components/interfaces/StackedArea'
+import ForecastLineChart from '../components/interfaces/ForecastLineChart'
 import ChartCard from '../components/shared/ChartCard'
 import PageData from '../data/metadata/expenditure-composition.json'
 import ImgData1 from '../data/values/stacked-sectoral.json'
 import ImgData2 from '../data/values/line-chart-sectoral.json'
+import ImgData3 from "../data/values/forecast-gdp.json";
 
 const ProductionComposition = () => {
+    const forecastStartIndex = 12;
     return (
       <div className='flex flex-col mt-24 p-2 md:p-0 md:mt-4 md:ml-72 md:mr-4 h-fit'>
 
@@ -116,6 +119,62 @@ const ProductionComposition = () => {
           />
         </ChartCard>
 
+        <ChartCard
+          title={PageData.charts[2].title}
+          subtitle={PageData.charts[2].description}
+          insights={PageData.charts[2].summary}
+          sources={PageData.charts[2].sources}
+        >
+          <ForecastLineChart
+            className="w-full md:w-1/2 h-56 md:h-72"
+            labels={ImgData3.year}
+            datasets={[
+              // --- Actual Data (solid line) ---
+              {
+                label: "Actual GDP",
+                data: ImgData3.actual_gdp_constant.map(w => w/1000000),
+                borderColor: "#1f77b4", // blue
+                backgroundColor: "rgba(31, 119, 180, 0.4)",
+                isForecast: false,
+              },
+
+              // --- Forecast Data (dashed line) ---
+              {
+                label: "Forecast GDP",
+                data: ImgData3.forecast_gdp.map(w => w/1000000),
+                borderColor: "#ff7f0e", // orange
+                backgroundColor: "rgba(255, 127, 14, 0.4)",
+                isForecast: true,
+              },
+
+              // --- Lower Bound (optional, dashed gray) ---
+              {
+                label: "Forecast LB",
+                data: ImgData3.forecast_lower.map(w => w/1000000),
+                borderColor: "rgba(150,150,150,0.8)",
+                backgroundColor: "rgba(200,200,200,0.3)",
+                // borderDash: [6, 6],
+                isForecast: true,
+              },
+
+              // --- Upper Bound (optional, dashed gray) ---
+              {
+                label: "Forecast UB",
+                data: ImgData3.forecast_upper.map(w => w/1000000),
+                borderColor: "rgba(150,150,150,0.8)",
+                backgroundColor: "rgba(200,200,200,0.3)",
+                // borderDash: [6, 6],
+                isForecast: true,
+              },
+            ]}
+            forecastStartIndex={forecastStartIndex}
+            xlabel="Year"
+            ylabel="GDP (Constant ₹ Millions)"
+            legendDisplay={true}
+            legendPosition="bottom"
+          />
+
+        </ChartCard>
 
         <Description>
           {PageData.overall_insight}

@@ -77,5 +77,24 @@ export interface BoxPlotChartProps {
     ylabel?: string;
     legendDisplay?: boolean;
     legendPosition?: "top" | "bottom" | "left" | "right";
-  }
+}
   
+export interface ForecastLineChartProps {
+  className?: string;
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor?: string;
+    backgroundColor?: string;
+    fill?: boolean;
+    tension?: number;
+    isForecast?: boolean;
+  }[];
+  forecastStartIndex?: number;
+  xlabel?: string;
+  ylabel?: string;
+  legendDisplay?: boolean;
+  legendPosition?: "top" | "bottom" | "left" | "right";
+}
+
