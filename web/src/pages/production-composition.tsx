@@ -5,7 +5,7 @@ import LineChart from '../components/interfaces/LineChart'
 import StackedAreaChart from '../components/interfaces/StackedArea'
 import ForecastLineChart from '../components/interfaces/ForecastLineChart'
 import ChartCard from '../components/shared/ChartCard'
-import PageData from '../data/metadata/expenditure-composition.json'
+import PageData from '../data/metadata/production-composition.json'
 import ImgData1 from '../data/values/stacked-sectoral.json'
 import ImgData2 from '../data/values/line-chart-sectoral.json'
 import ImgData3 from "../data/values/forecast-gdp.json";
