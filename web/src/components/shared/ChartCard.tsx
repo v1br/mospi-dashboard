@@ -8,7 +8,7 @@ const ChartCard: React.FC<ChartCardProps> = ({
     const isMobile = window.innerWidth < 768;
 
     return (
-        <div className="flex flex-col md:flex-row w-[88%] h-fit gap-8 mx-4 p-4 md:pr-8 bg-primary rounded-2xl my-4 shadow-xs">
+        <div className="flex flex-col md:flex-row md:w-[88%] h-fit gap-8 mx-4 p-4 md:pr-8 bg-primary rounded-2xl my-4 shadow-xs">
 
             {(!flip && !isMobile) && children}
 

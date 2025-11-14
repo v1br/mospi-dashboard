@@ -20,10 +20,6 @@ const Home = () => {
 
           {/* Tags */}
           <div className='w-fit ml-4 mt-6 flex flex-row items-center justify-center gap-1 text-xs font-medium text-secondary'>
-            <Tag to='https://github.com/Samarthya21'>
-                <em>Samarthya Alok 📚</em>
-            </Tag>
-            ●
             <Tag to='https://github.com/AbhinnV04'>
                 <em>Abhinn Verma 📊</em>
             </Tag>
